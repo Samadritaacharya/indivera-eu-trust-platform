@@ -1,6 +1,6 @@
 {
   "name": "indivera",
-  "version": "0.2.0",
+  "version": "0.2.1",
   "private": true,
   "type": "module",
   "description": "IndiVera — evidence-first India-to-Europe readiness, verification, matching, traceability and trade orchestration for textile and lifestyle SMEs.",
@@ -10,6 +10,6 @@
     "test": "node --test",
     "check": "node scripts/security-check.mjs && node --test"
   },
-  "engines": { "node": ">=22" },
+  "engines": { "node": "24.x" },
   "license": "MIT"
 }
