@@ -1,0 +1,117 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <meta name="description" content="IndiVera — India-to-Europe supplier readiness, evidence verification, buyer matching, traceability and RFQ orchestration." />
+  <title>IndiVera — Indian supply. European confidence.</title>
+  <link rel="stylesheet" href="/styles.css" />
+</head>
+<body id="top">
+  <header class="topbar">
+    <a class="brand" href="#top" aria-label="IndiVera home">
+      <span class="brand-mark" aria-hidden="true"><i>I</i><b>V</b></span>
+      <span class="brand-copy"><strong>INDIVERA</strong><small>Indian supply. European confidence.</small></span>
+    </a>
+    <nav aria-label="Primary">
+      <a href="#ready">Ready</a><a href="#verified">Verified</a><a href="#match">Match</a><a href="#passport">Passport</a><a href="#trade">Trade</a>
+    </nav>
+    <span class="beta">FREE BETA · GERMANY FIRST</span>
+  </header>
+
+  <main>
+    <section class="hero shell">
+      <div>
+        <p class="eyebrow">INDIA → EUROPE · TRUST INFRASTRUCTURE</p>
+        <h1>Make Indian supply <span>easier to trust.</span></h1>
+        <p class="lede">IndiVera turns fragmented market-entry requirements into one evidence-first workflow for Indian textile and lifestyle manufacturers and European buyers.</p>
+        <div class="hero-actions"><a class="button primary" href="#ready">Run IndiVera Ready</a><a class="button secondary" href="#match">Open buyer matching</a></div>
+        <p class="fineprint">Decision support, not legal certification. Rules determine readiness; AI can explain and extract, never override evidence.</p>
+      </div>
+      <aside class="hero-card" aria-label="IndiVera product suite">
+        <p class="mini-label">INDIVERA PRODUCT SUITE</p>
+        <div class="suite-step"><span>01</span><div><strong>IndiVera Ready</strong><small>Market readiness & compliance gaps</small></div></div>
+        <div class="suite-line"></div>
+        <div class="suite-step"><span>02</span><div><strong>IndiVera Verified</strong><small>Evidence behind every supplier</small></div></div>
+        <div class="suite-line"></div>
+        <div class="suite-step"><span>03</span><div><strong>IndiVera Match</strong><small>Buyer ↔ supplier fit</small></div></div>
+        <div class="suite-line"></div>
+        <div class="suite-step"><span>04</span><div><strong>IndiVera Passport</strong><small>Product traceability record</small></div></div>
+        <div class="suite-line"></div>
+        <div class="suite-step"><span>05</span><div><strong>IndiVera Trade</strong><small>RFQ & procurement orchestration</small></div></div>
+      </aside>
+    </section>
+
+    <section class="shell metrics" aria-label="Platform metrics">
+      <article><b id="metricSuppliers">—</b><span>Supplier profiles</span></article>
+      <article><b id="metricProducts">—</b><span>Products tracked</span></article>
+      <article><b id="metricRules">—</b><span>Readiness rules</span></article>
+      <article><b id="metricAudit">—</b><span>Audit chain</span></article>
+    </section>
+
+    <section class="section shell" id="ready">
+      <div class="section-heading"><div><p class="eyebrow">INDIVERA READY · EVIDENCE BEFORE EXPORT</p><h2>Know what stands between your product and Europe.</h2></div><p>Deterministic Germany-first readiness checks, source-linked findings and market-fit decision support.</p></div>
+      <div class="split">
+        <form class="panel form-grid" id="scanForm">
+          <label>Product name<input name="name" required maxlength="160" /></label>
+          <label>Category<select name="category"><option value="table-linen">Table linen</option><option value="bed-linen">Bed linen</option><option value="cushion-cover">Cushion cover</option><option value="fabric">Fabric</option><option value="bag">Bag / pouch</option><option value="apparel">Apparel</option><option value="other-textile">Other textile</option></select></label>
+          <label>Destination<select name="destination"><option value="DE">Germany</option><option value="NL">Netherlands</option><option value="AT">Austria</option><option value="FR">France</option></select></label>
+          <label>Channel<select name="channel"><option>B2B</option><option>B2C</option></select></label>
+          <label>Manufacturer<input name="manufacturerName" maxlength="180" /></label>
+          <label>Manufacturer email<input name="manufacturerEmail" maxlength="180" /></label>
+          <label class="wide">Manufacturer postal address<input name="manufacturerPostalAddress" maxlength="300" /></label>
+          <label>Product identifier<input name="productIdentifier" maxlength="120" /></label>
+          <label>Production batch<input name="productionBatch" maxlength="120" /></label>
+          <label>Fibre<input name="fibre" value="cotton" maxlength="80" /></label>
+          <label>Fibre percentage<input name="fibrePercentage" type="number" min="0" max="100" value="100" /></label>
+          <label>MOQ<input name="moq" type="number" min="1" /></label>
+          <label>FOB price €<input name="fobPriceEur" type="number" min="0" step="0.01" /></label>
+          <label>Lead time days<input name="leadTimeDays" type="number" min="0" /></label>
+          <label>Monthly capacity<input name="productionCapacityMonthly" type="number" min="0" /></label>
+          <details class="advanced wide"><summary>EU responsible person + safety</summary><div class="form-grid nested"><label>Name<input name="euResponsiblePersonName" /></label><label>Email<input name="euResponsiblePersonEmail" /></label><label class="wide">Postal address<input name="euResponsiblePersonPostalAddress" /></label><label class="wide">Safety / warning review<textarea name="safetyInformation" rows="2"></textarea></label></div></details>
+          <fieldset class="checks wide"><legend>Evidence available</legend><label><input type="checkbox" name="compositionEvidence" /> composition</label><label><input type="checkbox" name="reachEvidence" /> REACH pack</label><label><input type="checkbox" name="certificateEvidence" /> certificate</label><label><input type="checkbox" name="certificateVerified" /> certificate reviewed</label><label><input type="checkbox" name="packagingSpecification" /> packaging</label><label><input type="checkbox" name="qualityEvidence" /> quality</label><label><input type="checkbox" name="businessVerified" /> business reviewed</label></fieldset>
+          <div class="wide form-actions"><button class="button primary" type="submit">Analyze with IndiVera Ready</button><button class="button ghost" id="loadDemo" type="button">Load demo</button></div><p class="form-error wide" id="scanError" role="alert"></p>
+        </form>
+        <section class="panel result-panel" id="scanResult"><div class="empty-state"><span>IV</span><h3>Your readiness report appears here</h3><p>IndiVera separates blockers, improvements, future-readiness and source evidence.</p></div></section>
+      </div>
+    </section>
+
+    <section class="section shell" id="verified">
+      <div class="section-heading"><div><p class="eyebrow">INDIVERA VERIFIED · PROOF BEFORE PROCUREMENT</p><h2>Evidence behind every supplier.</h2></div><p>Verification scores represent platform evidence review only—not government approval or legal certification.</p></div>
+      <div class="verified-layout">
+        <div class="panel"><div class="panel-head"><h3>Supplier evidence profiles</h3><span class="tag">Derived live</span></div><div id="supplierList" class="list"></div></div>
+        <div class="panel document-panel"><div class="panel-head"><h3>Evidence intake</h3><span class="tag">Prompt-safe</span></div><form id="docForm"><label>Document title<input name="title" value="Supplier certificate" required /></label><label>Paste document text<textarea name="text" rows="9" placeholder="Certificate No: ... Material: cotton ..."></textarea></label><button class="button secondary" type="submit">Extract with IndiVera Verified</button></form><pre class="codebox" id="docResult">No document processed.</pre></div>
+      </div>
+    </section>
+
+    <section class="section shell" id="match">
+      <div class="section-heading"><div><p class="eyebrow">INDIVERA MATCH · FIND INDIA WITHOUT THE GUESSWORK</p><h2>Turn a buyer requirement into explainable supplier matches.</h2></div><p>Matching is based on category, destination, MOQ, price, lead time and requested evidence—not opaque AI similarity alone.</p></div>
+      <div class="split">
+        <form id="rfqForm" class="panel form-grid">
+          <label class="wide">RFQ title<input name="title" value="German table runner sourcing" required /></label><label>Destination<select name="destination"><option value="DE">Germany</option><option value="NL">Netherlands</option><option value="AT">Austria</option><option value="FR">France</option></select></label><label>Category<select name="category"><option value="table-linen">Table linen</option><option value="cushion-cover">Cushion cover</option><option value="fabric">Fabric</option><option value="bag">Bag / pouch</option></select></label><label>Quantity<input name="quantity" type="number" value="300" min="1" required /></label><label>Maximum MOQ<input name="maxMoq" type="number" value="100" min="1" /></label><label>Maximum FOB €<input name="maxFobPriceEur" type="number" value="12" step="0.01" /></label><label>Maximum lead days<input name="maxLeadTimeDays" type="number" value="40" min="1" /></label><fieldset class="checks wide"><legend>Required evidence</legend><label><input type="checkbox" name="evComposition" checked /> composition</label><label><input type="checkbox" name="evReach" /> REACH</label><label><input type="checkbox" name="evQuality" checked /> quality</label><label><input type="checkbox" name="evBusiness" checked /> business</label></fieldset><button class="button primary wide" type="submit">Run IndiVera Match</button>
+        </form>
+        <div class="panel" id="matchResults"><div class="empty-state"><span>M</span><h3>Matches appear here</h3><p>Each result explains why the supplier/product matched.</p></div></div>
+      </div>
+    </section>
+
+    <section class="section shell" id="passport">
+      <div class="section-heading"><div><p class="eyebrow">INDIVERA PASSPORT · KNOW WHAT BACKS IT</p><h2>Structured product provenance without pretending it is a legal certificate.</h2></div><p>Product identifiers, origin, manufacturer, batch and evidence readiness are exposed as a transparent traceability record.</p></div>
+      <div class="panel"><div class="panel-head"><h3>Demo product passports</h3><span class="tag">DPP-ready data model</span></div><div id="productList" class="product-grid"></div><div id="passportResult" class="passport-result"><p>Select a product to open its IndiVera Passport.</p></div></div>
+    </section>
+
+    <section class="section shell" id="trade">
+      <div class="section-heading"><div><p class="eyebrow">INDIVERA TRADE · RFQ → MATCH → REVIEW</p><h2>Orchestrate sourcing before adding payments or logistics risk.</h2></div><p>The beta creates and tracks RFQs and matching evidence. It intentionally does not act as customs broker, payment processor or contracting party.</p></div>
+      <div class="trade-grid"><div class="panel"><h3>Trade workflow</h3><ol class="timeline"><li><b>1</b><span>Buyer creates RFQ</span></li><li><b>2</b><span>IndiVera Match ranks candidates</span></li><li><b>3</b><span>Evidence reviewed</span></li><li><b>4</b><span>Introduction / sample request</span></li></ol><button class="button secondary" id="createTradeDemo">Create demo RFQ in IndiVera Trade</button></div><div class="panel"><div class="panel-head"><h3>RFQ ledger</h3><span class="tag">Audit-linked</span></div><div id="tradeList" class="list"></div></div></div>
+    </section>
+
+    <section class="section shell" id="trust">
+      <div class="section-heading"><div><p class="eyebrow">INDIVERA TRUST MODEL</p><h2>Rules before models. Evidence before claims.</h2></div><p>Uploaded supplier material is untrusted input. AI is bounded to extraction, normalization, translation and explanation.</p></div>
+      <div class="trust-grid"><article class="panel"><h3>Deterministic rules</h3><p>Compliance/readiness findings come from versioned rules linked to named authorities.</p></article><article class="panel"><h3>Prompt quarantine</h3><p>Documents containing instruction-hijacking patterns are quarantined before model handoff.</p></article><article class="panel"><h3>Audit chain</h3><p>Supplier, product and RFQ mutations create SHA-256 chained audit events.</p></article><article class="panel"><h3>Evidence semantics</h3><p>Self-declared, uploaded, reviewed and independently verified evidence are never treated as equivalent.</p></article></div>
+      <div class="panel sources-panel"><div class="panel-head"><h3>Regulatory source registry</h3><span class="tag">Official / authoritative</span></div><div id="sourcesList" class="sources"></div></div>
+    </section>
+  </main>
+
+  <footer class="footer shell"><p><strong>INDIVERA</strong> · Indian supply. European confidence.</p><p>Not legal, customs, laboratory or conformity-assessment advice.</p></footer>
+  <script type="module" src="/app.js"></script>
+</body>
+</html>
