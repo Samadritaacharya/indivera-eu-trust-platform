@@ -1,0 +1,18 @@
+{
+  "name": "IndiVera — Indian supply. European confidence.",
+  "short_name": "IndiVera",
+  "description": "India-to-Europe supplier readiness, verification, buyer matching, traceability and RFQ orchestration.",
+  "start_url": "/?source=pwa",
+  "scope": "/",
+  "display": "standalone",
+  "background_color": "#171716",
+  "theme_color": "#171716",
+  "icons": [
+    {"src":"/icon.svg","sizes":"any","type":"image/svg+xml","purpose":"any maskable"}
+  ],
+  "shortcuts": [
+    {"name":"IndiVera Ready","url":"/#ready"},
+    {"name":"IndiVera Match","url":"/#match"},
+    {"name":"IndiVera Passport","url":"/#passport"}
+  ]
+}
