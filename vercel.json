@@ -1,0 +1,16 @@
+{
+  "$schema": "https://openapi.vercel.sh/vercel.json",
+  "framework": null,
+  "functions": {
+    "api/index.mjs": {
+      "includeFiles": "data/**",
+      "maxDuration": 10
+    }
+  },
+  "rewrites": [
+    {
+      "source": "/api/indivera/:path*",
+      "destination": "/api/index?__iv_path=/api/indivera/:path*"
+    }
+  ]
+}
