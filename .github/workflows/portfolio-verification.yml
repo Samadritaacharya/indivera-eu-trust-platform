@@ -27,7 +27,7 @@ jobs:
       - name: Run backend unit tests and example scenario evaluations
         run: |
           python -m compileall -q .
-          if [ -d tests ]; then python -m pytest -q tests; fi
+          if [ -d tests ] && find tests -name 'test_*.py' | grep -q .; then python -m pytest -q tests; fi
           if [ -f scripts/evaluate.py ]; then python scripts/evaluate.py; fi
           if [ -f scripts/simulate_incident.py ]; then python scripts/simulate_incident.py; fi
           if [ -f scripts/export_demo_service.py ]; then python -m scripts.export_demo_service --output /tmp/platformpulse-demo-generated; fi
